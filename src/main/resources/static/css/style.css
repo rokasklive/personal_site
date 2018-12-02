@@ -1,0 +1,286 @@
+/*START OF RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*END OF RESET*/
+.wrapper {
+    margin: 0 auto;
+    max-width: 1582px;
+
+}
+/*START OF FONTS*/
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+/*END OF FONTS*/
+/*START OF BODY*/
+html, body {
+    height: 100%;
+}
+/*END OF BODY*/
+/*START OF HEADER AND NAV*/
+header{
+    padding: 40px 80px;
+}
+.title {
+    width: 250px;
+
+}
+header h1 {
+    font-size: 36px;
+}
+
+header h3 {
+    text-align: right;
+}
+
+.navList{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*START OF HEX*/
+#hexGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  list-style-type: none;
+}
+
+.hex {
+  position: relative;
+  visibility:hidden;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.hex::after{
+  content:'';
+  display:block;
+  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
+}
+.hexIn{
+  position: absolute;
+  width:96%;
+  padding-bottom: 110.851%; /* =  width / sin(60) */
+  margin:0 2%;
+  overflow: hidden;
+  visibility: hidden;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+}
+.hexIn * {
+  position: absolute;
+  visibility: visible;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.hexLink {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+}
+
+/*** HEX CONTENT **********************************************************************/
+.hex img {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-transform: rotate3d(0,0,0,0deg);
+      -ms-transform: rotate3d(0,0,0,0deg);
+          transform: rotate3d(0,0,0,0deg);
+}
+
+.hex h1, .hex p {
+  width: 100%;
+  padding: 5%;
+  box-sizing:border-box;
+  background-color: rgba(78, 128, 159, 0.8);
+  font-weight: 300;
+  -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+          transition:          transform .2s ease-out, opacity .3s ease-out;
+}
+.hex h1 {
+  bottom: 50%;
+  padding-top:50%;
+  font-size: 1.5em;
+  z-index: 1;
+  -webkit-transform:translate3d(0,-100%,0);
+      -ms-transform:translate3d(0,-100%,0);
+          transform:translate3d(0,-100%,0);
+}
+.hex h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 10%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.hex p {
+  top: 50%;
+  padding-bottom:50%;
+  -webkit-transform:translate3d(0,100%,0);
+      -ms-transform:translate3d(0,100%,0);
+          transform:translate3d(0,100%,0);
+}
+
+
+/*** HOVER EFFECT  **********************************************************************/
+.hexLink:hover h1, .hexLink:focus h1,
+.hexLink:hover p, .hexLink:focus p{
+  -webkit-transform:translate3d(0,0,0);
+      -ms-transform:translate3d(0,0,0);
+          transform:translate3d(0,0,0);
+}
+
+/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+
+
+@media (max-width: 10000px) { /* <- 2-1  hexagons per row */
+  #hexGrid{
+    padding-bottom: 11.2%
+  }
+  .hex {
+    width: 50%; /* = 100 / 3 */
+  }
+  .hex:nth-child(3n+3){ /* first hexagon of even rows */
+    margin-left:25%;  /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 400px) {
+    #hexGrid {
+        font-size: 13px;
+    }
+}
+/*END OF HEX*/
+
+/*START OF MAIN*/
+main{
+    padding: 40px 80px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.contentContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+    min-width: 500px;
+}
+
+.contentContainer p{
+    display: inline-block;
+    align-self: center;
+    width: 75%;
+    padding-left: 30px;
+}
+
+.hexContainer{
+    display: inline-block;
+    width: 50%;
+    min-width: 500px;
+}
+
+.socialLinks{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.socialLinks i {
+    display: inline-block;
+    font-size: 30px;
+    align-self: baseline;
+    padding: 15px 0;
+    color: rgba(78, 127, 159, 0.8);
+}
+
+.socialLinks i:hover{
+    color: rgba(248, 152, 29, 0.8);
+}
+
+/*END OF MAIN*/
+/*START OF FOOTER*/
+
+footer p {
+    text-align: center;
+}
+/*END OF FOOTER*/
+
+@media (max-width: 1000px){
+    main{
+        flex-direction: column-reverse;
+    }
+}
+h1 a {
+    text-decoration: none;
+    color: black;
+}
