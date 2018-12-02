@@ -11,6 +11,11 @@ public class MVCcontroller {
 		return "index";
 	}
 	
+	@GetMapping("/index")
+	public String redirectIndex() {
+		return "index";
+	}
+	
 	@GetMapping("/about")
 	public String returnAboutMe() {
 		return "about";
