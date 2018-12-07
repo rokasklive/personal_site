@@ -21,11 +21,6 @@ public class MVCcontroller {
 		return "about";
 	}
 	
-	@GetMapping("/cv")
-	public String returnCV() {
-		return "cv";
-	}
-	
 	@GetMapping("/projects")
 	public String returnProjects() {
 		return "projects";

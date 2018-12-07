@@ -277,10 +277,58 @@ footer p {
 
 @media (max-width: 1000px){
     main{
-        flex-direction: column-reverse;
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .contentContainer{
+        padding-bottom: 20px;
     }
 }
 h1 a {
     text-decoration: none;
     color: black;
+}
+
+.projectsContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.projectsContent p {
+    text-align: justify;
+}
+
+.projectsContent h1 {
+    padding-left: 30px;
+    font-size: 28px;
+    align-self: center;
+    padding-bottom: 30px;
+
+}
+
+.projectsContent ul{
+    align-self: center;
+    list-style: circle;
+    width: 75%;
+    padding-left: 30px;
+}
+
+.projectsContent li {
+    padding-bottom: 5px;
+}
+
+.projectsContent h3 {
+    font-size: 24px;
+    padding: 15px 0;
+    align-self: center;
+    padding-left: 30px;
+}
+
+.atmGit{
+    font-size: 36px;
+    align-self: center;
+    color: rgba(78, 127, 159, 0.8);
+}
+.atmGit:hover{
+    color: rgba(248, 152, 29, 0.8);
 }

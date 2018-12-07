@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
+<!--“Every problem is an opportunity in disguise.” ― John Adams-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 
-    <title>Home</title>
+    <title>About</title>
     <meta charset="UTF-8">
     <meta name="description" content="Personal website with contact information, project examples and social links">
     <meta name="keywords" content="java, back-end, programmer, developer, software, spring">
     <meta name="author" content="Rokas Kučinskas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
-    <link href="../static/css/style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -28,52 +28,57 @@
     <main>
     <div class="contentContainer">
         <div class="socialLinks">
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-git-square"></i>
-            <i class="fas fa-envelope-square"></i>
+            <a href="https://www.linkedin.com/in/rokask/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/rokasklive/" target="_blank"><i class="fab fa-git-square"></i></a>
+            <a href="mailto:rokask@live.com"><i class="fas fa-envelope-square"></i></a>
         </div>
         <p>
-            My name is Rokas and I am an aspiring JAVA software developer based in Vilnius, Lithuania. </br></br>
-            I am currently interested in full-time work or internship oportunities. </br></br>
-            My work examples, CV and contact details are available on this site. </br> </br>
+            My name is Rokas and I am an aspiring JAVA software developer based in Vilnius, Lithuania.
+            I am currently interested in full-time work or internship oportunities.
+            <br><br>
+            While most people find solving problems annoying or frustrating I find it to be rewarding and it is one of the main
+            reasons I chose to pursue a career in this field. I consider myslef to be quite versitile and
+            adapting since I enjoy learning new things, experimenting, discovering.
+            <br><br>
+            My work examples, CV and contact details are available on this site.
             Please feel free to contact me.
         </p>
 
     </div>
-        <div class="hexContainer">
+    <div class="hexContainer">
 
 
-        <ul id="hexGrid">
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="../img/java.png" alt="" />
-                        <h1>Projects</h1>
-                        <p>A collection of my projects</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="../img/cv.png" alt="" />
-                        <h1>CV</h1>
-                        <p>PDF</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="../img/me.png" alt="" />
-                        <h1>About me</h1>
-                        <p>Who I am and how to get in touch</p>
-                    </a>
-                </div>
-            </li>
+    <ul id="hexGrid">
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="projects.html">
+                    <img src="img/java.png"/>
+                    <h1>Projects</h1>
+                    <p>A collection of my projects</p>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="https://drive.google.com/file/d/1PWkPKo9LyvHpnE-0cfm_PMa6uAOlejNL/view?usp=sharing" target="_blank">
+                    <img src="../img/cv.png" alt="" />
+                    <h1>CV</h1>
+                    <p>PDF</p>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="about.html">
+                    <img src="../img/me.png" alt="" />
+                    <h1>About me</h1>
+                    <p>Who I am and how to get in touch</p>
+                </a>
+            </div>
+        </li>
 
-        </ul>
-        </div>
+    </ul>
+    </div>
     </main>
     <!-- <footer>
         <p>© 2018 Rokas Kučinskas</p>
